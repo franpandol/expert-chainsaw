@@ -1,9 +1,6 @@
 const { app } = require('@azure/functions');
-const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 
-var blobStoragePath = process.env.BLOB_STORAGE_PATH;
 const listPosts = [{
-        "url": `${blobStoragePath}/mkdir.md`,
         "title": "mkdir",
     }
 ];

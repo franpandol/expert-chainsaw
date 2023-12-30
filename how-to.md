@@ -1,36 +1,52 @@
-static web apps
-Pre requisitos
-Visual Studio Code
-Node.js
-Azure CLI
-Git
+🚀 Desplegando tu Primera App en Azure Static Web Apps
 
-qué queremos aprender ? A hacer deploy de una app javascript + html en azure web static apps
-Primer tutorial:
-https://learn.microsoft.com/en-us/azure/static-web-apps/getting-started?tabs=vanilla-javascript
+Requisitos Previos:
 
-Pasos:
-Crear un repo en github. Vamos a clonar el ejemplo que da azure
-    https://github.com/staticwebdev/vanilla-basic/generate
+    Visual Studio Code: Un editor de código versátil.
+    Node.js: Para ejecutar paquetes de desarrollo y herramientas.
+    Azure CLI: Interactúa con los servicios de Azure directamente desde tu terminal.
+    Git: Imprescindible para el control de versiones.
 
-Hacemos un fork en github y después lo clonamos
-git clone https://github.com/<YOUR_GITHUB_ACCOUNT_NAME>/my-first-static-web-app.git
+Objetivo:
+Vamos a aprender cómo desplegar una sencilla aplicación de JavaScript y HTML en Azure Static Web Apps, una plataforma ideal para proyectos web estáticos.
 
+Primeros Pasos:
 
-Select F1 to open the Visual Studio Code command palette.
+    Crear un Repositorio en GitHub:
+        Azure nos ofrece un ejemplo para empezar. Haz un fork del repositorio de ejemplo de Azure en tu cuenta de GitHub.
 
-Enter Create static web app in the command box.
+    Clonar el Repositorio:
+        En tu terminal, escribe:
 
-Select Azure Static Web Apps: Create static web app....
+        bash
 
-Esto va a crear los recursos en Azure.
-Vamos a nuestro código src/index.html y modificamos el título de la página
+    git clone https://github.com/<TU_NOMBRE_DE_USUARIO_GITHUB>/my-first-static-web-app.git
 
-Vamos a hacer un commit y un push
+    Esto copiará el proyecto de ejemplo a tu máquina local.
 
-git add .
-git commit -m "my first commit"
-git push
+Preparar el Proyecto en Visual Studio Code:
 
-Vamos a ver el resultado en Azure
+    Abre Visual Studio Code.
+    Presiona F1 para abrir la paleta de comandos.
+    Escribe y selecciona Azure Static Web Apps: Create static web app.... Esto iniciará el proceso de creación en Azure.
 
+Personaliza tu Proyecto:
+
+    Navega a src/index.html y cambia el título de la página a algo más personal.
+
+Sube tus Cambios a GitHub:
+
+    Ahora, es tiempo de guardar tus cambios y subirlos al repositorio:
+
+    bash
+
+        git add .
+        git commit -m "Mi primer commit en Azure Static Web Apps"
+        git push
+
+        Con esto, tus cambios estarán en GitHub.
+
+    Verifica tu Despliegue en Azure:
+        Una vez que Azure Static Web Apps procese tu código, podrás ver tu sitio en vivo. Revisa la URL proporcionada por Azure para ver tu trabajo.
+
+🌟 ¡Listo! Ya tienes tu primera app corriendo en Azure Static Web Apps. Ahora puedes experimentar más, agregando funcionalidades o probando con diferentes frameworks. Azure Static Web Apps es una plataforma excelente para desplegar y escalar tus proyectos web de manera sencilla y eficiente.

@@ -2,7 +2,7 @@ const { app } = require('@azure/functions');
 
 const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 
-var blobStoragePath = process.env.BLOB_STORAGE_PATH;
+var blobStoragePath = "https://publiclinuxcommandsweb.blob.core.windows.net/blogposts";
 const listPosts = [{
         "url": `${blobStoragePath}/mkdir.md`,
         "title": "mkdir",
@@ -14,7 +14,7 @@ app.http('getPostContent', {
     authLevel: 'anonymous',
     handler: async (request, context) => {
         // handle url params
-        console.log("blobStoragePath")
+        console.log(blobStoragePath)
         console.log(blobStoragePath)
         const url = new URL(request.url);
         const title = url.searchParams.get("title");
