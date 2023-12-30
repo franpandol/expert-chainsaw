@@ -29,7 +29,7 @@ function getPosts() {
     const postUrl = `${blobStoragePath}/${title}.md`;
   
     fetch(postUrl)
-      .then(response => response.text())
+    .then(response => response.text())
       .then(markdown => {
         const postContentDiv = document.getElementById("post-content");
         postContentDiv.innerHTML = marked.parse(markdown); // Convert Markdown to HTML
