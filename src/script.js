@@ -21,7 +21,8 @@ function getPosts() {
 }
 
 function getPostContent(title) {
-  fetch("api/getPostContent?title=" + encodeURIComponent(title))
+
+  fetch("api/getPostContent?title=" + title)
     .then((response) => response.json())
     .then((markdown) => {
       const postContentDiv = document.getElementById("post-content");
