@@ -23,14 +23,7 @@ function getPosts() {
 function getPostContent(title) {
 
   fetch("api/getPostContent?title=" + title)
-    .then((response) => response.json())
-    .then((markdown) => {
-      const postContentDiv = document.getElementById("post-content");
-      postContentDiv.innerHTML = marked.parse(markdown); // Convert Markdown to HTML with configured options
-    })
-    .catch((error) => {
-      console.error("Error fetching post content:", error);
-    });
+    .then((response) => console.log(response))
 }
 
 document.addEventListener("DOMContentLoaded", () => {
