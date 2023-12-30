@@ -14,6 +14,8 @@ app.http('getPostContent', {
     authLevel: 'anonymous',
     handler: async (request, context) => {
         // handle url params
+        console.log("blobStoragePath")
+        console.log(blobStoragePath)
         const url = new URL(request.url);
         const title = url.searchParams.get("title");
         context.log(`Received request for title: "${title}"`);

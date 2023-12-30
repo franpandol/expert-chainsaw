@@ -12,6 +12,8 @@ app.http('getPosts', {
     methods: ['GET'],
     authLevel: 'anonymous',
     handler: async (request, context) => {
+        console.log("blobStoragePath")
+        console.log(blobStoragePath)
         context.log(`Http function processed request for url "${request.url}"`);
 
         const titles = [];
