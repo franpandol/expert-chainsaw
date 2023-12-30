@@ -22,10 +22,8 @@ app.http('getPostContent', {
         var content = "";
         for (const post of listPosts) {
             if (post.title == title) {
-                context.log(post.url)
                 const response = await fetch(post.url);
                 content = await response.text();
-                context.log(content);
                 break;
             }
         }
