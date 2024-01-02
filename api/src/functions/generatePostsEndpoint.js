@@ -1,11 +1,5 @@
 const { app } = require('@azure/functions');
 
-app.timer('generatePosts', {
-    schedule: '0 0 1 * * *',
-    handler: (myTimer, context) => {
-        return generatePosts();
-    }
-});
 import OpenAI from "openai";
 
 const openai = new OpenAI({
@@ -23,3 +17,12 @@ async function generatePosts() {
 
 
 }
+app.http('generatePostsEndpoint', {
+    methods: ['GET', 'POST'],
+    authLevel: 'anonymous',
+    handler: async (request, context) => {
+        context.log(`Http function processed request for url "${request.url}"`);
+        text = generatePosts();
+        return { body: `${text}!` };
+    }
+});
